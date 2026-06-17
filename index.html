@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<title>Found Canadians — community, mutual aid, and a path home</title>
+<meta name="description" content="A collaboratively governed, community-owned resource for Found Canadians. Surrender letter response guides, mutual aid, safe community connections, and the path to building something together.">
+<meta property="og:title" content="Found Canadians — community, mutual aid, and a path home">
+<meta property="og:description" content="A collaboratively governed, community-owned resource for Found Canadians. Surrender letter response guides, mutual aid, safe community connections.">
+<meta property="og:url" content="https://foundcanadians.org/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Found Canadians — community, mutual aid, and a path home">
+<meta name="twitter:description" content="A collaboratively governed, community-owned resource for Found Canadians. Surrender letter response guides, mutual aid, safe community connections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#000000; --bg-grad:#050607;
+  --panel:#0c0e11; --panel-2:#111417;
+  --line:#1c2024; --line-2:#262a30;
+  --text:#e6e8ea; --text-2:#9aa1a9; --text-3:#646b73;
+  --accent:#e84545; --accent-rgb:232,69,69;
+  --accent2:#e8b14f; --accent2-rgb:232,177,79;
+  --max-w:1140px;
+  --radius:12px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:radial-gradient(1200px 800px at 70% -10%, var(--bg-grad), var(--bg)) fixed, var(--bg);
+  color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;
+  position:relative;
+}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,0.015) 0 1px,transparent 1px 3px);pointer-events:none;mix-blend-mode:overlay;z-index:1}
+::selection{background:rgba(var(--accent-rgb),0.25)}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(var(--accent-rgb),.5)}70%{box-shadow:0 0 0 7px rgba(var(--accent-rgb),0)}100%{box-shadow:0 0 0 0 rgba(var(--accent-rgb),0)}}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:50;background:rgba(0,0,0,.82);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+nav .inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.5px;color:var(--text)}
+.brand .mark{width:16px;height:16px;border:1.5px solid var(--accent2);position:relative;transform:rotate(45deg)}
+.brand .mark::after{content:'';position:absolute;inset:3px;background:var(--accent2)}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3px;color:var(--text-2);transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a.cta{border:1px solid var(--line-2);padding:7px 15px;border-radius:6px;transition:border-color .2s,color .2s}
+.nav-links a.cta:hover{border-color:var(--accent);color:var(--accent)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-2);border-radius:6px;padding:7px 10px;color:var(--text);cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px}
+
+/* hero */
+.hero{padding:130px 0 60px;position:relative}
+.hero::before{content:'';position:absolute;top:-20%;left:-8%;width:600px;height:600px;background:radial-gradient(circle,rgba(var(--accent-rgb),.06) 0%,transparent 65%);pointer-events:none}
+.hero .content{max-width:840px;margin:0 auto;text-align:center}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--text-3);margin-bottom:22px;display:flex;align-items:center;justify-content:center;gap:10px}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(34px,5vw,62px);line-height:1.02;letter-spacing:-.5px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{margin-top:22px;font-size:17px;color:var(--text-2);font-weight:300;max-width:62ch;margin-left:auto;margin-right:auto;line-height:1.7}
+.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{font-family:'IBM Plex Mono',monospace;font-size:13px;padding:13px 24px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,border-color .2s,color .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#000;font-weight:600}
+.btn-ghost{border:1px solid var(--line-2);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* statement block */
+.statement{margin-top:40px;max-width:720px;margin-left:auto;margin-right:auto;padding:32px;border:1px solid var(--line-2);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel-2),var(--panel));position:relative}
+.statement::before{content:'';position:absolute;top:0;left:30px;right:30px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.statement .st-head{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1.5px;color:var(--text-3);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.statement blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:var(--text-2);line-height:1.6;border-left:2px solid var(--accent);padding-left:20px;margin:14px 0}
+.statement blockquote strong{color:var(--text);font-style:normal}
+.statement .st-sig{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-3);margin-top:16px;text-align:right}
+.statement .st-sig span{color:var(--accent2)}
+
+/* sections */
+.sec{padding:90px 0;border-top:1px solid var(--line)}
+.sec-head{max-width:720px;margin-bottom:48px}
+.sec-head .idx{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--accent);display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.sec-head .idx::after{content:'';height:1px;background:var(--line);flex:1}
+.sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.06;letter-spacing:-.3px}
+.sec-head h2 em{font-style:italic;color:var(--accent)}
+.sec-head p{margin-top:14px;font-size:16px;color:var(--text-2);font-weight:300;max-width:60ch}
+
+.needs-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.need{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:border-color .25s,transform .25s}
+.need:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.need .need-num{font-family:'Fraunces',serif;font-weight:600;font-size:32px;color:var(--accent);line-height:1;margin-bottom:12px}
+.need h3{font-family:'Fraunces',serif;font-weight:600;font-size:20px;margin-bottom:10px}
+.need p{font-size:14.5px;color:var(--text-2);font-weight:300;line-height:1.6}
+
+/* surrender guide */
+.guide{border:1px solid var(--line-2);border-radius:var(--radius);overflow:hidden;margin-top:20px}
+.guide-bar{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1.2px;color:var(--accent);padding:14px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;background:var(--panel-2)}
+.guide-body{padding:32px 28px;background:var(--panel)}
+.guide-body p{font-size:14.5px;color:var(--text-2);font-weight:300;line-height:1.7;margin-bottom:14px}
+.guide-body p:last-child{margin-bottom:0}
+.guide-body p strong{color:var(--text);font-weight:400}
+.guide-step{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+.guide-step:last-child{border-bottom:none}
+.guide-step .gs-num{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--accent2);line-height:1;flex-shrink:0;width:28px;text-align:right}
+.guide-step .gs-body h4{font-family:'Fraunces',serif;font-weight:500;font-size:17px;color:var(--text);margin-bottom:4px}
+.guide-step .gs-body p{font-size:14px;color:var(--text-2);font-weight:300;margin:0;max-width:600px}
+
+/* principles */
+.principles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.principle{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:border-color .25s}
+.principle:hover{border-color:rgba(var(--accent2-rgb),.25)}
+.principle h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin-bottom:6px}
+.principle h3 .pr-num{color:var(--accent2);margin-right:8px}
+.principle p{font-size:14px;color:var(--text-2);font-weight:300}
+
+/* join */
+.join-panel{border:1px solid var(--line-2);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel-2),var(--panel));overflow:hidden}
+.join-bar{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1.2px;color:var(--accent);padding:14px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.join-body{text-align:center;padding:48px 36px}
+.join-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,3.6vw,40px);line-height:1.06}
+.join-body p{max-width:52ch;margin:16px auto 0;color:var(--text-2);font-weight:300;font-size:16px}
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:40px 0 56px}
+footer .frow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-2);transition:color .2s}
+.foot-links a:hover{color:var(--accent)}
+.foot-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-3);line-height:1.6}
+.foot-meta a{color:var(--accent2);border-bottom:1px solid transparent;transition:border-color .2s}
+.foot-meta a:hover{border-color:var(--accent2)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){.needs-grid,.principles{grid-template-columns:1fr}}
+@media(max-width:620px){
+  .nav-links{position:fixed;top:60px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:rgba(0,0,0,.97);border-bottom:1px solid var(--line);padding:8px 0;display:none}
+  .nav-links.open{display:flex}.nav-links a{width:100%;padding:13px 28px}.nav-links a.cta{border:none;border-radius:0}
+  .nav-toggle{display:block}.wrap{padding:0 18px}.guide-body{padding:24px 18px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap inner">
+    <a class="brand" href="#top"><span class="mark"></span>FOUND CANADIANS</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">MENU</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#needs">Needs</a>
+      <a href="#guide">Surrender Letters</a>
+      <a href="#principles">Principles</a>
+      <a class="cta" href="#join">Join us</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="wrap content">
+      <div class="eyebrow"><span class="dot"></span>FOUND CANADIANS · EMERGENT · COLLABORATIVE</div>
+      <h1>A community for everyone who found their way <em>home</em>.</h1>
+      <p class="lede">We are Found Canadians — a global community of people who reclaimed their Canadian citizenship through ancestral ties. We are building something together: a community-owned resource, a mutual aid network, and a collective voice. This is the beginning of that conversation.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#join">Join the community <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M12 5l7 7-7 7"/></svg></a>
+        <a class="btn btn-ghost" href="#guide">Surrender letter guide</a>
+      </div>
+
+      <div class="statement reveal">
+        <div class="st-head"><span class="dot"></span>A declaration</div>
+        <blockquote>
+          <strong>foundcanadians.org</strong> is hereby declared an open source project: a collaboratively governed and community-owned resource and system and network for Found Canadians the world over.<br><br>
+          We assume no leadership and seek instead consent and participation from this community to synthesize something new. We are emergent. In light of recent events, it is important to act in solidarity and support each other.
+        </blockquote>
+        <div class="st-sig">— <span>the community, gathering</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec" id="needs">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="idx">01 / WHAT WE NEED</div>
+        <h2>Three things we can build <em>together</em>.</h2>
+        <p>These are the immediate needs the community has identified. None of them can be done alone. All of them require collective effort.</p>
+      </div>
+      <div class="needs-grid">
+        <div class="need reveal">
+          <div class="need-num">01</div>
+          <h3>Trusted Information</h3>
+          <p>A public-facing set of factual resources for people navigating the Found Canadian path — instead of tumbling through Reddit threads and Facebook groups unsure what's real. With so many of us coming from at-risk situations, we need to bring people in the right way, without scams or misinformation.</p>
+        </div>
+        <div class="need reveal">
+          <div class="need-num">02</div>
+          <h3>Safe Paths In</h3>
+          <p>Known safe communities (like this one) and trusted organizations — legal firms who have picked up the cause, friendly MPs, community centers, diaspora organizations. Every one of us has a connection that could help someone else. The Franco-American Center of New Hampshire. Your local. Your networks.</p>
+        </div>
+        <div class="need reveal">
+          <div class="need-num">03</div>
+          <h3>Mutual Aid</h3>
+          <p>Fundraising capacity for Found Canadians in need — people facing legal costs from surrender letters, people who relocated in good faith and are now in limbo, people who need help to prove their case. Pooled resources, transparently governed, disbursed by the community for the community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="guide">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="idx">02 / URGENT</div>
+        <h2>Received a surrender letter? <em>Here's what to do.</em></h2>
+        <p>In June 2026, IRCC began sending letters to approved Found Canadians stating their citizenship certificates may be revoked and demanding surrender. This is a developing situation. Below is practical guidance — consult a qualified immigration lawyer for your specific case.</p>
+      </div>
+      <div class="guide reveal">
+        <div class="guide-bar"><span class="dot"></span>SURRENDER LETTER RESPONSE GUIDE</div>
+        <div class="guide-body">
+          <p><strong>Important:</strong> A letter demanding surrender is <em>not</em> a revocation. You have rights and you have time. Do not panic. Do not act without advice.</p>
+
+          <div class="guide-step">
+            <div class="gs-num">1</div>
+            <div class="gs-body">
+              <h4>Do not return your certificate yet</h4>
+              <p>The letter asks you to. The standard timeline is 30 days. Use that time to get advice. Returning it voluntarily may waive your right to challenge the process.</p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="gs-num">2</div>
+            <div class="gs-body">
+              <h4>Document everything</h4>
+              <p>Keep the original letter, your application, your approval notice, your certificate number, and all correspondence with IRCC. Scan everything. Store copies in multiple places.</p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="gs-num">3</div>
+            <div class="gs-body">
+              <h4>Get legal help</h4>
+              <p>Contact an immigration lawyer experienced with citizenship matters. If cost is a barrier, reach out to the community — we are exploring mutual aid options. Organizations like Immigrant Quebec and Justice for Canadians may be able to help or refer.</p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="gs-num">4</div>
+            <div class="gs-body">
+              <h4>Respond in writing</h4>
+              <p>Acknowledge receipt of the letter. Request specific details about what documentation is allegedly missing or deficient. Ask for the review process in writing. Do not admit to any error or deficiency. A template is available from the community.</p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="gs-num">5</div>
+            <div class="gs-body">
+              <h4>Share your story</h4>
+              <p>If you received a letter, let the community know. The pattern of who is being targeted matters — age, location, documentation type, application date. The collective picture is stronger than any individual case.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="principles">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="idx">03 / HOW WE WORK</div>
+        <h2>Governed by <em>consent, not command</em>.</h2>
+        <p>This is not a top-down organization. These are the principles the community has begun to articulate — they will evolve as more voices join.</p>
+      </div>
+      <div class="principles">
+        <div class="principle reveal">
+          <h3><span class="pr-num">01</span>Community-owned</h3>
+          <p>The domain, the resources, and any funds belong to the community, not any individual. Stewardship is a responsibility, not a power.</p>
+        </div>
+        <div class="principle reveal">
+          <h3><span class="pr-num">02</span>Collaborative governance</h3>
+          <p>Decisions are made by those they affect. No unilateral declarations. We build by consent and participation.</p>
+        </div>
+        <div class="principle reveal">
+          <h3><span class="pr-num">03</span>Emergent and adaptive</h3>
+          <p>We don't have a rigid structure. We're figuring it out as we go, responding to what the community actually needs. The form follows the function.</p>
+        </div>
+        <div class="principle reveal">
+          <h3><span class="pr-num">04</span>Open source everything</h3>
+          <p>Every resource we create is open and freely available. No paywalls, no gatekeeping, no proprietary claims on the path home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="join">
+    <div class="wrap">
+      <div class="join-panel reveal">
+        <div class="join-bar"><span class="dot"></span>JOIN THE CONVERSATION</div>
+        <div class="join-body">
+          <h2>This is the beginning. <em>What comes next is up to us.</em></h2>
+          <p>The Found Canadians community is gathering on Discord — the same place many of us have been supporting each other through the process. If you're a Found Canadian, if you're in the process, or if you want to help, come join the conversation.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://discord.gg/" target="_blank" rel="noopener">Join the Discord <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+          </div>
+          <p style="margin-top:24px;font-size:13px;color:var(--text-3)">Have resources, connections, or ideas to share? Reach out in the community. Every contribution shapes what this becomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <div class="foot-links">
+      <a href="#about">About</a>
+      <a href="#needs">Needs</a>
+      <a href="#guide">Guide</a>
+      <a href="#principles">Principles</a>
+    </div>
+    <div class="foot-meta">
+      Found Canadians · <a href="https://github.com/" target="_blank" rel="noopener">Open source on GitHub</a> · Built by the community
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  if(t)t.addEventListener('click',function(){l.classList.toggle('open')});
+  var els=document.querySelectorAll('.reveal');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
